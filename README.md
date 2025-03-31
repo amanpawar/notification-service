@@ -149,7 +149,7 @@ The service now provides a RESTful API for sending notifications:
     "content": "Notification content",
     "channel": "slack|email|message",
     "recipients": ["user1", "user@example.com", "+1234567890"],
-    "scheduled_at": "2025-03-31T15:30:00Z"  // Optional, RFC3339 format
+    "scheduled_at": "2025-03-31T15:30:00Z"
 }
 ```
 

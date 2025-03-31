@@ -2,7 +2,6 @@ package handlers
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
 	"notification-service/internal/models"
 	"notification-service/internal/services"
@@ -90,8 +89,6 @@ func (h *NotificationHandler) SendNotification(w http.ResponseWriter, r *http.Re
 	var scheduledTime *time.Time
 	if req.ScheduledAt != "" {
 		parsedTime, err := time.Parse(time.RFC3339, req.ScheduledAt)
-		fmt.Println("parsedTime", parsedTime)
-		fmt.Println("now", time.Now())
 		if err != nil {
 			sendJSONResponse(w, http.StatusBadRequest, APIResponse{
 				Success: false,
